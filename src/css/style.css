@@ -1,0 +1,201 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Thay đổi kích thước của scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Chiều rộng của scrollbar dọc */
+  height: 12px;
+  /* Chiều cao của scrollbar ngang */
+}
+
+/* Thay đổi kiểu của track */
+::-webkit-scrollbar-track {
+  background: white;
+  /* Màu nền của track */
+  border-radius: 10px;
+  /* Bo tròn các góc của track */
+}
+
+/* Thay đổi kiểu của thumb */
+::-webkit-scrollbar-thumb {
+  background: white;
+  /* Màu nền của thumb */
+  border-radius: 10px;
+  /* Bo tròn các góc của thumb */
+}
+
+/* Thay đổi kiểu của thumb khi hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7ec4da;
+  /* Màu nền của thumb khi hover */
+}
+
+.none {
+  display: none;
+}
+
+.chat-page {
+  display: flex;
+  flex-direction: row;
+}
+.chat-page .avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00a1f8;
+  border-radius: 50%;
+}
+.chat-page .list-contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+}
+.chat-page .list-contact .title {
+  margin-bottom: 15px;
+}
+.chat-page .list-contact .title h3 {
+  color: rgb(123, 198, 233);
+}
+.chat-page .list-contact .title p {
+  font-weight: bold;
+  color: #ccc;
+}
+.chat-page .list-contact .search {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.chat-page .list-contact .search input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.chat-page .list-contact .list-friend {
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+.chat-page .list-contact .friend {
+  padding: 5px 15px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.chat-page .list-contact .friend > * {
+  margin-right: 10px;
+}
+.chat-page .list-contact .friend .name {
+  font-weight: bold;
+  color: #808080;
+}
+.chat-page .list-contact .friend.active {
+  background-color: #f5f5f5;
+}
+.chat-page .list-contact .my-account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-image: linear-gradient(to right, #5e68fa, #c744d8);
+}
+.chat-page .list-contact .my-account > * {
+  margin-right: 10px;
+}
+.chat-page .list-contact .my-account:hover {
+  cursor: pointer;
+}
+.chat-page .list-contact .my-account .name {
+  color: white;
+  font-weight: bold;
+}
+.chat-page .chat-window {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.chat-page .chat-window .contact-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.chat-page .chat-window .contact-menu .info {
+  display: flex;
+  flex-direction: row;
+}
+.chat-page .chat-window .contact-menu .info img {
+  margin-right: 10px;
+}
+.chat-page .chat-window .contact-menu .info .name {
+  font-weight: bold;
+}
+.chat-page .chat-window .contact-menu .info .active-now {
+  font-weight: bold;
+  font-size: 13px;
+  color: rgb(32, 209, 126);
+}
+.chat-page .chat-window .contact-menu .menu {
+  display: flex;
+  flex-direction: row;
+}
+.chat-page .chat-window .contact-menu .menu > * {
+  margin-right: 15px;
+}
+.chat-page .chat-window .contact-menu .menu i {
+  color: #5e9cfa;
+}
+.chat-page .chat-window .contact-menu .menu i:hover {
+  cursor: pointer;
+}
+.chat-page .chat-window .messages-display {
+  height: 80vh;
+  padding: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.chat-page .chat-window .messages-display .message {
+  display: block;
+  max-width: 60%;
+  margin-bottom: 10px;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 20px;
+}
+.chat-page .chat-window .messages-display .message.own {
+  align-self: flex-end;
+  background-color: #00a1f8;
+  color: white;
+}
+.chat-page .chat-window .message-input {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.chat-page .chat-window .message-input input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  flex: 1;
+}/*# sourceMappingURL=style.css.map */

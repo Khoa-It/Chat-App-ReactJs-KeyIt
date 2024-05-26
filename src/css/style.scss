@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thay đổi kích thước của scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Chiều rộng của scrollbar dọc */
+    height: 12px;
+    /* Chiều cao của scrollbar ngang */
+}
+
+/* Thay đổi kiểu của track */
+::-webkit-scrollbar-track {
+    background: white;
+    /* Màu nền của track */
+    border-radius: 10px;
+    /* Bo tròn các góc của track */
+}
+
+/* Thay đổi kiểu của thumb */
+::-webkit-scrollbar-thumb {
+    background: white;
+    /* Màu nền của thumb */
+    border-radius: 10px;
+    /* Bo tròn các góc của thumb */
+}
+
+/* Thay đổi kiểu của thumb khi hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #7ec4da;
+    /* Màu nền của thumb khi hover */
+}
+
+.none {
+    display: none;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin input-custom {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+@import 'chat-page';

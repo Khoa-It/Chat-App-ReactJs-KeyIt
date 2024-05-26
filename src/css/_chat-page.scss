@@ -1,0 +1,128 @@
+.chat-page{
+    @include flex-row;
+    .avatar{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #00a1f8 ;
+        border-radius: 50%;
+
+    }
+    .list-contact{
+        flex: 1;
+        @include flex-col;
+        padding: 30px 20px;
+        border-right: 1px solid #ccc;
+        height: 100vh;
+        .title{
+            margin-bottom: 15px;
+            h3{color: rgb(123, 198, 233)}
+            p{
+                font-weight: bold;
+                color: #ccc;
+            }
+        }
+        .search{
+            @include flex-row;
+            width: 100%;
+            input{
+                @include input-custom;
+                width: 100%;
+                background-color: #f1f1f1;
+            }
+            margin-bottom: 15px;
+        }
+        .list-friend{
+            overflow-y: scroll;
+            padding-right:10px;
+        }
+        .friend{
+            padding: 5px 15px;
+            @include flex-row;
+            width: 100%;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            & > * {margin-right: 10px;}
+            .name{font-weight: bold; color: #808080;}
+            &.active{
+                background-color: #f5f5f5;
+            }
+        }
+        .my-account{
+            @include flex-row;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            & > * {margin-right: 10px;}
+            &:hover{cursor: pointer;}
+            background-image: linear-gradient(to right, #5e68fa, #c744d8);
+            .name{
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+    .chat-window{
+        flex: 3;
+        @include flex-col;
+        height: 100vh;
+        .contact-menu{
+            @include flex-row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            .info{
+                @include flex-row;
+                img{ margin-right: 10px;}
+                .name{font-weight: bold;}
+                .active-now{
+                    font-weight: bold;
+                    font-size: 13px;
+                    color: rgb(32, 209, 126);
+                }
+            }
+            .menu{
+                @include flex-row;
+                & > * {margin-right: 15px;}
+                i{
+                    color: #5e9cfa;
+                    &:hover{cursor: pointer;}
+                }
+            }
+
+        }
+        .messages-display{
+            height: 80vh;
+            padding: 10px;
+            overflow-y: scroll;
+            @include flex-col;
+            .message{
+                display: block;
+                max-width: 60%;
+                margin-bottom: 10px;
+                background-color: #eee;
+                padding: 10px;
+                border-radius: 20px;
+                &.own{
+                    align-self: flex-end;
+                    background-color: #00a1f8;
+                    color: white;
+                }
+            }
+        }
+        .message-input{
+            padding: 10px;
+            @include flex-row;
+            
+            input{
+                @include input-custom;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                flex: 1;
+            }
+        }
+    }
+    
+}
