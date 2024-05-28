@@ -11,6 +11,9 @@
     height: 12px;
     /* Chiều cao của scrollbar ngang */
 }
+img{
+    display: block;
+}
 
 /* Thay đổi kiểu của track */
 ::-webkit-scrollbar-track {
@@ -37,7 +40,11 @@
 .none {
     display: none;
 }
-
+.wrapper-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -55,4 +62,30 @@
     border-radius: 5px;
 }
 
+@mixin fn-input-custom($padding, $background, $width) {
+    width: $width;
+    padding: $padding;
+    background-color: $background;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+@mixin fn-button-custom($bgcolor, $padding, $color, $text_size) {
+    padding: $padding;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: $bgcolor;
+    color: $color;
+    font-size: $text_size;
+}
+
+@mixin gradient-text {
+    background: linear-gradient(to right, #203ff1, #fe7bfe); /* Màu gradient */
+    -webkit-background-clip: text; /* Chỉ áp dụng background cho phần chữ */
+    -webkit-text-fill-color: transparent; /* Làm cho phần chữ trong suốt để lộ background */
+}
+
+
 @import 'chat-page';
+@import 'login-page';

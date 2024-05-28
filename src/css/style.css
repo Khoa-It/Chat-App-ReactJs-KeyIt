@@ -13,6 +13,10 @@
   /* Chiều cao của scrollbar ngang */
 }
 
+img {
+  display: block;
+}
+
 /* Thay đổi kiểu của track */
 ::-webkit-scrollbar-track {
   background: white;
@@ -37,6 +41,12 @@
 
 .none {
   display: none;
+}
+
+.wrapper-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chat-page {
@@ -198,4 +208,51 @@
   border: 1px solid #ccc;
   border-radius: 20px;
   flex: 1;
+}
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+}
+.login-page .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  border: 1px solid #ccc;
+}
+.login-page .login-form .app-logo {
+  width: 100px;
+}
+.login-page .login-form h1 {
+  background: linear-gradient(to right, #203ff1, #fe7bfe); /* Màu gradient */
+  -webkit-background-clip: text; /* Chỉ áp dụng background cho phần chữ */
+  -webkit-text-fill-color: transparent; /* Làm cho phần chữ trong suốt để lộ background */
+}
+.login-page .login-form > * {
+  margin-bottom: 15px;
+}
+.login-page .login-form > *:last-child {
+  margin-bottom: 0;
+}
+.login-page .login-form input {
+  width: 100%;
+  padding: 15px;
+  background-color: #ebebeb;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.login-page .login-form button {
+  padding: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #63b4eb;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.login-page .login-form button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
